@@ -1,7 +1,8 @@
 import S from './Button.module.css'
+import './ButtonTeste.css'
 
-export const Botao = () => {
+export const Botao = ({ nome, texto }) => {
     return(
-        <button className={S.botao}>teste</button>
+        <button className={nome}>{texto}</button>
     )
 }
