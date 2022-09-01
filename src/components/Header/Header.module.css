@@ -5,7 +5,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 32px 0;
-    background-color:blanchedalmond
+    background-color:blanchedalmond;
+    min-width: 340px;
+    gap: 10px;
 }
 
 .headerDireita {
