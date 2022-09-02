@@ -1,4 +1,4 @@
-import { RequisitaCliente } from "../../services/requisicao"
+import { RequisitaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
 
 export function Clientes() {
@@ -9,6 +9,7 @@ export function Clientes() {
         const arrayFinal = [];
         result.forEach((item, index) => {
             arrayFinal.push({
+                id: item.id,
                 nome: item.nome,
                 email: item.email,
                 telefone: item.telefone,
