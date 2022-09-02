@@ -16,8 +16,8 @@ export function Home() {
         </div>
         <div className="button-container">
             <Botao texto='Clientes' clique='/clientes' />
-            <Botao texto='Livros' clique='/livros'/>
-            <Botao texto='Informática' clique='/informatica'/>
+            <Botao texto='Livros' clique='/livros' />
+            <Botao texto='Informática' clique='/informatica' />
         </div>
     </main>
     )
