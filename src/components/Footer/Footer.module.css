@@ -1,5 +1,5 @@
 .footer {
-    background-color: rgb(254, 249, 240);
+    background-color: #185ADB;
     padding: 8px 0;
     text-align: center;
     bottom: 0;
@@ -7,4 +7,5 @@
     width: 100vw;
     position: fixed;
     min-width: 340px;
+    color: #FEFBF3;
 }
