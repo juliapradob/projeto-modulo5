@@ -1,4 +1,6 @@
 import { Botao } from "../../components/Button/Button"
+import homeImg from '../../assets/images/home.svg'
+
 import "./Home.css"
 
 
@@ -8,9 +10,9 @@ export function Home() {
         <div className="text-limit">
                 <h2>Qual categoria você deseja gerenciar?</h2>
         </div>
+        
         <div className="img-container">
-            
-            <img src="https://static.preparaenem.com/2021/10/livros.jpg" alt="Livros Organizados em Estante" />
+            <img src={homeImg} alt="Exibição de dados em tela escura " />
         </div>
         <div className="button-container">
             <Botao texto='Clientes' clique='/clientes' />
