@@ -1,5 +1,7 @@
 import { RequisitaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
+import { Info } from "../../components/Info/Info";
+import { Tabela } from "../../components/Tabela/Tabela";
 
 export function Clientes() {
     const [clientes, setClientes] = useState([]);
@@ -27,9 +29,8 @@ export function Clientes() {
     return (<div>
        <h1>Clientes</h1>
         <div>
-            {clientes.map((item, index)=>{
-            return <p key={index}>{item.nome}<br/>{item.telefone}<br/>{item.email}<br/>{item.cpf}</p>
-        })}</div> 
+            <Tabela itens = {clientes}/>
+           </div> 
     </div>
     
     )
