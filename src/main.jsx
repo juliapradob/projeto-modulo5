@@ -7,8 +7,11 @@ import { Clientes } from './pages/Clientes/Clientes'
 import { Livros } from './pages/Livros/Livros'
 import { Informatica } from './pages/Informatica/Informatica'
 import { Footer } from './components/Footer/Footer'
+import { CreateClientes } from './components/CRUD/CreateClientes'
+import { CreateLivros } from './components/CRUD/CreateLivros'
 
 import './index.css'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,6 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/clientes' element={<Clientes/>}/>
         <Route path='/livros' element={<Livros/>}/>
         <Route path='/informatica' element={<Informatica/>}/>
+        <Route path='/add-cliente' element={<CreateClientes/>}/>
+        <Route path='/add-livro' element={<CreateLivros/>}/>
       </Routes>
     </main>  
     <Footer />
