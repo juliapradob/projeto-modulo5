@@ -2,6 +2,8 @@ import { RequisitaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
 import { Info } from "../../components/Info/Info";
 import { Tabela } from "../../components/Tabela/Tabela";
+import { Botao } from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 export function Clientes() {
     const [clientes, setClientes] = useState([]);
@@ -29,6 +31,7 @@ export function Clientes() {
     return (<div>
        <h1>Clientes</h1>
         <div>
+            <Botao texto="Adicionar cliente" clique="/add-cliente" />
             <Tabela itens = {clientes}/>
            </div> 
     </div>
