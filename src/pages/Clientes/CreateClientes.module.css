@@ -1,0 +1,19 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin: 15px auto;
+    gap: 10px;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexContainer button {
+    width: 28%;
+    margin: 30px auto;
+    height: 23px;
+}

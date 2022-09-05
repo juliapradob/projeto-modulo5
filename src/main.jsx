@@ -7,8 +7,8 @@ import { Clientes } from './pages/Clientes/Clientes'
 import { Livros } from './pages/Livros/Livros'
 import { Informatica } from './pages/Informatica/Informatica'
 import { Footer } from './components/Footer/Footer'
-import { CreateClientes } from './components/CRUD/CreateClientes'
-import { CreateLivros } from './components/CRUD/CreateLivros'
+import { CreateClientes } from './pages/Clientes/CreateClientes'
+import { CreateLivros } from './pages/Livros/CreateLivros'
 
 import './index.css'
 

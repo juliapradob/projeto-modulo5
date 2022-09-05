@@ -1,7 +1,12 @@
 import { useState } from "react"
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
+
+import S from './CreateClientes.module.css'
 
 export const CreateClientes = () => {
+    const navigate = useNavigate()
+
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [telefone, setTelefone] = useState('')
@@ -14,11 +19,13 @@ export const CreateClientes = () => {
             telefone,
             cpf
         })
+
+        navigate('/clientes')
     }
 
     return (
-    <div>
-        <form>
+    <div className={S.flexContainer}>
+        <form className={S.formulario}>
             <label htmlFor="">Nome:</label>
             <input type="text" onChange={(e) => setNome(e.target.value)}/>
 
