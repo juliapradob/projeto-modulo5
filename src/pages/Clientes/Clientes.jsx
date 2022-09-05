@@ -4,6 +4,7 @@ import { Info } from "../../components/Info/Info";
 import { Tabela } from "../../components/Tabela/Tabela";
 import { Botao } from "../../components/Button/Button";
 import { Link } from "react-router-dom";
+import S from './Clientes.module.css';
 
 export function Clientes() {
     const [clientes, setClientes] = useState([]);
@@ -28,13 +29,15 @@ export function Clientes() {
         getClientes()
     }, [])
 
-    return (<div>
-       <h1>Clientes</h1>
-        <div>
+    return (
+    <div>
+        <div className={S.cadastroContainer}>
+            <h1>Clientes</h1>
             <Botao texto="Adicionar cliente" clique="/add-cliente" />
+        </div>
+        <div>
             <Tabela itens = {clientes}/>
-           </div> 
+        </div> 
     </div>
-    
     )
 }

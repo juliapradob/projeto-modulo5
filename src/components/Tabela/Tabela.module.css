@@ -1,5 +1,18 @@
 .infoContainer { 
     display: flex; 
     flex-direction: column;
-    
+    gap: 1vh;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.legenda {
+    display: flex;
+    width: 85%;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.legenda p {
+    width: 25%;
 }
