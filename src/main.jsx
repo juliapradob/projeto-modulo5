@@ -2,13 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header } from './components/Header/Header'
+import { Footer } from './components/Footer/Footer'
 import { Home } from './pages/Home/Home'
-import { Clientes } from './pages/Clientes/Clientes'
+import { HomeClientes } from './pages/Clientes/HomeClientes'
 import { Livros } from './pages/Livros/Livros'
 import { Informatica } from './pages/Informatica/Informatica'
-import { Footer } from './components/Footer/Footer'
-import { CreateClientes } from './pages/Clientes/CreateClientes'
+import { CriaClientes } from './pages/Clientes/CriaClientes/CriaClientes'
 import { CreateLivros } from './pages/Livros/CreateLivros'
+import { EditaClientes } from './pages/EditaClientes/EditaClientes'
 
 import './index.css'
 
@@ -20,12 +21,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <main>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/clientes' element={<Clientes/>}/>
+        <Route path='/clientes' element={<HomeClientes/>}/>
         <Route path='/livros' element={<Livros/>}/>
         <Route path='/informatica' element={<Informatica/>}/>
-        <Route path='/add-cliente' element={<CreateClientes/>}/>
+        <Route path='/add-cliente' element={<CriaClientes/>}/>
         <Route path='/add-livro' element={<CreateLivros/>}/>
-        <Route path='/edita-cliente' element={<CreateClientes/>}/>
+        <Route path='/edita-cliente' element={<EditaClientes/>}/>
       </Routes>
     </main>  
     <Footer />

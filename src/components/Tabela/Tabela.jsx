@@ -1,10 +1,10 @@
-import React from 'react'
-import { Info } from '../Info/Info'
+import { Link } from 'react-router-dom'
 import S from './Tabela.module.css'
 
 export const Tabela = (props) => {
+  console.log(props.clientes)
   return (
-    <table className = {S.infoContainer}>
+    <table className = {S.table}>
       <thead>
         <th>ID</th>
         <th>Nome</th>
@@ -13,7 +13,7 @@ export const Tabela = (props) => {
         <th>CPF</th>
         <th>Ações</th>
       </thead>
-      {props.clientes.map(cliente=>{
+      {props.clientes.map(cliente => {
         return (
           <tr>
             <td>{cliente.id}</td>
@@ -24,9 +24,9 @@ export const Tabela = (props) => {
             <td>
               <Link to = {`/edita-cliente/${cliente.id}`}>Editar</Link>
               <br/>-<br/>
-              <a onClick={(e) =>{
+              <a onClick={(e) => {
                 e.preventDefault()
-                props.deletar(cliente.id)
+                props.aoDeletar(cliente.id)
               }} href="#">Deletar</a>
             </td>
           </tr>
@@ -34,20 +34,3 @@ export const Tabela = (props) => {
     </table>
   )
 }
-        <div className={S.botoes}>
-          <Botao texto = "Editar" navegação={false} clique={()=>{
-            console.log(id)
-          }}/>
-          <Botao texto = "Deletar" navegação={false} clique={()=>{
-            const confirmaDelecao = confirm('Você deseja deletar este usuário?')
-            if(confirmaDelecao) {
-              DeletaCliente(id).then(()=>{
-                alert('Usuário deletado com sucesso')
-                navigate('/clientes')
-              }).catch(error=>{
-                alert('Erro ao deletar usuário')
-                console.log(error)
-              })
-            }
-          }}/>
-        </div>

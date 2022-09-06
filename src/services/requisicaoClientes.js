@@ -14,4 +14,4 @@ export const CriaCliente = (newUser) => {
     return axios.post(url, newUser)
 }
 
-export const EditaCliente=()=>{}
+export const EditaCliente = () => {}
