@@ -35,7 +35,7 @@ export function Clientes() {
                     if(confirmaDelecao) {
                         DeletaCliente(id).then(()=>{
                             alert('Usuário deletado com sucesso')
-                            navigate('/clientes')
+                            getClientes()
                         }).catch(error=>{
                             alert('Erro ao deletar usuário')
                             console.log(error)
