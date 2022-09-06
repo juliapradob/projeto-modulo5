@@ -10,8 +10,10 @@ export const DeletaCliente = (id) => {
     return axios.delete(`${url}/${id}`)
 }
 
-export const CriaCliente = (newUser) => {
-    return axios.post(url, newUser)
+export const CriaCliente = (clienteNovo) => {
+    return axios.post(url, clienteNovo)
 }
 
-export const EditaCliente = () => {}
+export const EditaCliente = (clienteAtualizado) => {
+    return axios.put(`${url}/${id}`, clienteAtualizado)
+}
