@@ -28,7 +28,7 @@ export function Livros() {
     return (<div>
        <h1>Livros</h1>
         <div>
-            <Botao texto="Adicionar livro" clique="/add-livro" />
+            <Botao texto="Adicionar livro" navegação={true} clique="/add-livro" />
 
             {livros.map((item, index)=>{
             return <p key={index}>{item.id}<br/>{item.titulo}<br/>{item.autor}<br/>{item.genero}<br/>{item.valor}</p>

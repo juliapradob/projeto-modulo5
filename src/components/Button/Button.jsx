@@ -3,10 +3,10 @@ import './ButtonTeste.css'
 import { useNavigate } from 'react-router-dom';
 
 
-export const Botao = ({ nome, texto, clique }) => {
+export const Botao = ({ nome, texto, clique, navegação }) => {
     const navigate = useNavigate()
 
     return(
-        <button className={S[nome]} onClick={()=>navigate(clique)}>{texto}</button>
+        <button className={S[nome]} onClick={navegação?()=>navigate(clique):clique}>{texto}</button>
     )
 }

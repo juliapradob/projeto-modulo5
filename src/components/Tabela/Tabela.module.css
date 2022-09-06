@@ -6,6 +6,10 @@
     flex-wrap: wrap;
 }
 
+.infoContainer div {
+    height: 20px;
+}
+
 .legenda {
     display: flex;
     width: 85%;

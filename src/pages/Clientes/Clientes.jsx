@@ -9,21 +9,13 @@ import S from './Clientes.module.css';
 export function Clientes() {
     const [clientes, setClientes] = useState([]);
 
-    const getClientes = async () => {
-        const { result } = await RequisitaCliente();
-        const arrayFinal = [];
-        result.forEach((item, index) => {
-            arrayFinal.push({
-                id: item.id,
-                nome: item.nome,
-                email: item.email,
-                telefone: item.telefone,
-                cpf: item.cpf
-            })
+    const getClientes = () => {
+        RequisitaCliente().then(({data})=>{
+            setClientes(data)
+        }).catch(error => {
+            console.log('Error', error)
         })
-        setClientes(arrayFinal)
     }
-
 
     useEffect(()=>{
         getClientes()
@@ -33,7 +25,7 @@ export function Clientes() {
     <div>
         <div className={S.cadastroContainer}>
             <h1>Clientes</h1>
-            <Botao texto="Adicionar cliente" clique="/add-cliente" />
+            <Botao texto="Adicionar cliente" navegação={true} clique="/add-cliente" />
         </div>
         <div>
             <Tabela itens = {clientes}/>

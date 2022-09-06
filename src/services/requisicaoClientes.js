@@ -1,6 +1,15 @@
 import axios from 'axios';
 
-export const RequisitaCliente = async () => {
-    const response = await axios.get('https://api-livrasilia.herokuapp.com/clientes');
-    return response.data;
+const url = 'https://api-livrasilia.herokuapp.com/clientes'
+
+export const RequisitaCliente = () => {
+    return axios.get(url)
 };
+
+export const DeletaCliente = (id) => {
+    return axios.delete(`${url}/${id}`)
+}
+
+export const CriaCliente = (newUser) => {
+    return axios.post(url, newUser)
+}

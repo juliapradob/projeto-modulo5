@@ -15,9 +15,9 @@ export function Home() {
             <img src={homeImg} alt="Exibição de dados em tela escura " />
         </div>
         <div className="button-container">
-            <Botao texto='Clientes' clique='/clientes' />
-            <Botao texto='Livros' clique='/livros' />
-            <Botao texto='Informática' clique='/informatica' />
+            <Botao texto='Clientes' navegação={true} clique='/clientes' />
+            <Botao texto='Livros' navegação={true} clique='/livros' />
+            <Botao texto='Informática' navegação={true} clique='/informatica' />
         </div>
     </main>
     )

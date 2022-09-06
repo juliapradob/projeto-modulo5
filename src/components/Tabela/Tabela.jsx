@@ -2,7 +2,7 @@ import React from 'react'
 import { Info } from '../Info/Info'
 import S from './Tabela.module.css'
 
-export const Tabela = ({itens}) => {
+export const Tabela = (props) => {
   return (
     <div className = {S.infoContainer}>
       <div className={S.legenda}>
@@ -12,7 +12,7 @@ export const Tabela = ({itens}) => {
         <p>CPF</p>
       </div>
         {itens.map((item,index) => { 
-           return <Info key={index} nome = {item.nome} telefone = {item.telefone} cpf = {item.cpf} email = {item.email}></Info>
+           return <Info key={index} id={item.id} nome = {item.nome} telefone = {item.telefone} cpf = {item.cpf} email = {item.email}></Info>
         })}
     </div>
   )
