@@ -28,7 +28,21 @@ export function Clientes() {
             <Botao texto="Adicionar cliente" navegação={true} clique="/add-cliente" />
         </div>
         <div>
-            <Tabela itens = {clientes}/>
+            <Tabela 
+                itens = {clientes} 
+                deletar={(id)=>{
+                    const confirmaDelecao = confirm('Você deseja deletar este usuário?')
+                    if(confirmaDelecao) {
+                        DeletaCliente(id).then(()=>{
+                            alert('Usuário deletado com sucesso')
+                            navigate('/clientes')
+                        }).catch(error=>{
+                            alert('Erro ao deletar usuário')
+                            console.log(error)
+                        })
+                    }
+                }
+            }/>
         </div> 
     </div>
     )

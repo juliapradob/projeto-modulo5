@@ -13,3 +13,5 @@ export const DeletaCliente = (id) => {
 export const CriaCliente = (newUser) => {
     return axios.post(url, newUser)
 }
+
+export const EditaCliente=()=>{}
