@@ -4,7 +4,7 @@ import S from './Tabela.module.css'
 export const Tabela = (props) => {
   console.log(props.clientes)
   return (
-    <table className = {S.table}>
+    <table className = {S.tabela}>
       <thead>
         <th>ID</th>
         <th>Nome</th>
@@ -21,9 +21,8 @@ export const Tabela = (props) => {
             <td>{cliente.email}</td>
             <td>{cliente.telefone}</td>
             <td>{cliente.cpf}</td>
-            <td>
+            <td className={S.acoes}>
               <Link to = {`/edita-cliente/${cliente.id}`}>Editar</Link>
-              <br/>-<br/>
               <a onClick={(e) => {
                 e.preventDefault()
                 props.aoDeletar(cliente.id)

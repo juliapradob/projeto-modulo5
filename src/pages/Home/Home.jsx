@@ -12,7 +12,7 @@ export function Home() {
         </div>
         
         <div className="img-container">
-            <img src={homeImg} alt="Exibição de dados em tela escura " />
+            <img src={homeImg} alt="Exibição de dados em tela escura" />
         </div>
         <div className="button-container">
             <Botao texto='Clientes' navegação={true} clique='/clientes' />

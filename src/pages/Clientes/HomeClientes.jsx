@@ -1,8 +1,8 @@
 import { RequisitaCliente, DeletaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
-import { Tabela } from "../../components/Tabela/Tabela";
+import { Tabela } from "./Tabela/Tabela"
 import { Botao } from "../../components/Button/Button";
-import S from './Clientes.module.css';
+import S from './HomeClientes.module.css';
 
 export function HomeClientes() {
     const [clientes, setClientes] = useState([]);

@@ -3,11 +3,16 @@
     flex-direction: row;
     width: 100vw;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding: 32px 0;
     background-color: #185ADB;
     min-width: 340px;
     gap: 10px;
+}
+
+.header img {
+    width: 80px;
 }
 
 .headerDireita {
@@ -18,5 +23,13 @@
 
 a {
     text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: #FEFBF3;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #9BE51A;
 }

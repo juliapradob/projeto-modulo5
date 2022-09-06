@@ -8,4 +8,9 @@
     position: fixed;
     min-width: 340px;
     color: #FEFBF3;
+    font-size: 12px;
+}
+
+.footer a {
+    font-weight: 800;
 }
