@@ -1,7 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import S from './Form.module.css'
+import { useParams } from "react-router-dom";
 
 export const Form = (props) => {
+
+    const params = useParams()
 
     const [cliente, setCliente] = useState({
         nome: "",
@@ -10,10 +13,20 @@ export const Form = (props) => {
         cpf: ""
     });
 
+    useEffect(() => {
+        if(props.temId) {
+            setCliente(props.editarCliente)
+        }
+    }, [props.editarCliente])
+
     return (
         <form className={S.formulario}>
+            {props.temId && <label>ID:</label>} 
+            {props.temId && <input type='text' value={params.id} disabled></input>}
+            
             <label htmlFor="nome">Nome:</label>
-            <input 
+            <input
+                value={cliente.nome} 
                 type="text" 
                 placeholder="Insira o nome aqui"
                 onChange={(e) => {
@@ -25,6 +38,7 @@ export const Form = (props) => {
 
             <label htmlFor="email">E-mail:</label>
             <input 
+                value={cliente.email} 
                 type="text" 
                 placeholder="Insira o e-mail aqui"
                 onChange={(e) => {
@@ -36,6 +50,7 @@ export const Form = (props) => {
 
             <label htmlFor="telefone">Telefone:</label>
             <input
+                value={cliente.telefone} 
                 type="text"
                 placeholder="Insira o telefone aqui"
                 onChange={(e) => {
@@ -47,6 +62,7 @@ export const Form = (props) => {
 
             <label htmlFor="cpf">CPF:</label>
             <input 
+                value={cliente.cpf} 
                 type="text"
                 placeholder="Insira o CPF aqui"
                 onChange={(e) => {
@@ -59,7 +75,7 @@ export const Form = (props) => {
             <button onClick={(e) => {
                 e.preventDefault()
                 props.aoTerminar(cliente)
-            }}>{props.temId ? "Editar" : "Cadastrar"}</button>
+            }}>{props.temId ? "Salvar" : "Cadastrar"}</button>
         </form>
     )
 }

@@ -6,10 +6,12 @@ import S from './HomeClientes.module.css';
 
 export function HomeClientes() {
     const [clientes, setClientes] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     const getClientes = () => {
         RequisitaCliente().then(({ data }) => {
             setClientes(data.result)
+            setIsLoading(false)
         }).catch(error => {
             console.log('Error', error)
         })
@@ -19,11 +21,15 @@ export function HomeClientes() {
         getClientes()
     }, []);
 
+    if(isLoading) {
+        return <div>Carregando!</div>
+    }
+
     return (
         <div>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
-                <Botao texto="Adicionar cliente" navegação={true} clique="/add-cliente" />
+                <Botao texto="Adicionar cliente" navegação={true} clique="/cria-cliente" />
             </div>
             <Tabela 
                 clientes={clientes} 

@@ -6,6 +6,10 @@ export const RequisitaCliente = () => {
     return axios.get(url)
 };
 
+export const RequisitaClientePorId = (id) => {
+    return axios.get(`${url}/${id}`)
+}
+
 export const DeletaCliente = (id) => {
     return axios.delete(`${url}/${id}`)
 }
@@ -14,6 +18,6 @@ export const CriaCliente = (clienteNovo) => {
     return axios.post(url, clienteNovo)
 }
 
-export const EditaCliente = (clienteAtualizado) => {
+export const EditaCliente = (id, clienteAtualizado) => {
     return axios.put(`${url}/${id}`, clienteAtualizado)
 }
