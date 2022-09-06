@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import { Form } from '../Clientes/Form/Form'
-import { EditaCliente } from '../../services/requisicaoClientes'
+import { Form } from '../Form/Form'
+import { EditaCliente } from '../../../services/requisicaoClientes'
 
 export const EditaClientes = () => {
     const navigate = useNavigate()
