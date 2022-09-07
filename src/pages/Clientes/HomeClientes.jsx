@@ -1,5 +1,6 @@
 import { RequisitaCliente, DeletaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
+import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
 import { Botao } from "../../components/Button/Button";
 import S from './HomeClientes.module.css';
@@ -22,7 +23,7 @@ export function HomeClientes() {
     }, []);
 
     if(isLoading) {
-        return <div>Carregando!</div>
+        return <Loading/>
     }
 
     return (
