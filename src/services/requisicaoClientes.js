@@ -19,5 +19,6 @@ export const CriaCliente = (clienteNovo) => {
 }
 
 export const EditaCliente = (id, clienteAtualizado) => {
+    console.log(id, clienteAtualizado)
     return axios.put(`${url}/${id}`, clienteAtualizado)
 }
