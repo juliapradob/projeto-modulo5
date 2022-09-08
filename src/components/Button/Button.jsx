@@ -1,7 +1,10 @@
-import S from './Button.module.css'
+import { useNavigate } from 'react-router-dom';
 
-export const Botao = () => {
+
+export const Botao = ({ nome, texto, clique, navegação }) => {
+    const navigate = useNavigate()
+
     return(
-        <button className={S.botao}>teste</button>
+        <button className={[nome]} onClick={navegação?()=>navigate(clique):clique}>{texto}</button>
     )
 }

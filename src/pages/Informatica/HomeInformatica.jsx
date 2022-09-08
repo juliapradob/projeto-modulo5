@@ -1,3 +1,3 @@
 export function Informatica() {
-    return <h1>oi</h1>
+    return <h1>Informática</h1>
 }
