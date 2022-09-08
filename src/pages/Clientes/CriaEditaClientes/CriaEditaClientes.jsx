@@ -20,24 +20,28 @@ export const CriaEditaClientes = () => {
     }, [])
 
     return (
-        <div className={S.formulario}>
-            <h1>{params.id ? "Editar usuário" : "Cadastrar usuário"}</h1>
-            <Form temId={params.id} editarCliente={editarCliente} aoTerminar={(cliente) => {
-                if(params.id) {
-                    console.log(cliente)
-                    EditaCliente(params.id, {nome: cliente.nome, email: cliente.email, telefone: cliente.telefone, cpf: cliente.cpf}).then(response => {
-                        navigate('/clientes')
-                    }).catch(error => {
-                        alert('Erro na edição do cliente')
-                    })
-                } else {
-                    CriaCliente(cliente).then(response => {
-                        navigate('/clientes')
-                    }).catch(error => {
-                        alert('Erro na criação do cliente')
-                    })
-                }
-            }}/>
+        <div>
+            <Header/>
+            <div className={S.formulario}>
+                <h1>{params.id ? "Editar usuário" : "Cadastrar usuário"}</h1>
+                <Form temId={params.id} editarCliente={editarCliente} aoTerminar={(cliente) => {
+                    if(params.id) {
+                        console.log(cliente)
+                        EditaCliente(params.id, {nome: cliente.nome, email: cliente.email, telefone: cliente.telefone, cpf: cliente.cpf}).then(response => {
+                            navigate('/clientes')
+                        }).catch(error => {
+                            alert('Erro na edição do cliente')
+                        })
+                    } else {
+                        CriaCliente(cliente).then(response => {
+                            navigate('/clientes')
+                        }).catch(error => {
+                            alert('Erro na criação do cliente')
+                        })
+                    }
+                }}/>
+            </div>
         </div>
+        
     )
 }

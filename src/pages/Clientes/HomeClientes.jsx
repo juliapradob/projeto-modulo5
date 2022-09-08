@@ -1,5 +1,6 @@
 import { RequisitaCliente, DeletaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState } from "react"
+import { Header } from "../../components/Header/Header";
 import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
 import { Botao } from "../../components/Button/Button";
@@ -28,6 +29,7 @@ export function HomeClientes() {
 
     return (
         <div>
+            <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
                 <Botao texto="Adicionar cliente" navegação={true} clique="/cria-cliente" />
