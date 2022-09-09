@@ -5,12 +5,14 @@ export const Tabela = (props) => {
   return (
     <table className = {S.tabela}>
       <thead>
-        <th>ID</th>
-        <th>Título</th>
-        <th>Autor</th>
-        <th>Gênero</th>
-        <th>Valor</th>
-        <th>Ações</th>
+        <tr className={S.head}>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Gênero</th>
+          <th>Valor</th>
+          <th>Ações</th>
+        </tr>
       </thead>
       <tbody>
         {props.livros.map((livro, index) => {
