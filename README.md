@@ -1,9 +1,6 @@
 # Livrasilia: a plataforma de gestão de estoque e clientes que você não sabia que precisava!
 
-Hech é um estudio de tatuagem ficticio, feito como projeto final para o ultimo módulo do curso Resilia Educação, desenvolvimento web full stack, consiste em um front end em React.js consumindo uma API  feita em Node.
-
 A Livrasilia é uma plataforma SPA de gestão de estoque e base de clientes criada para o projeto final do curso de Desenvolvimento Web Full Stack da Resilia Educação. Criada com um front-end em React.js consumindo uma API Rest desenvolvida em Node.js.
-
 
 ## Tecnologias Utilizadas
 
@@ -51,8 +48,28 @@ O site em funcionamento pode ser acessado [aqui](por link aqui)
 
 Para entrar na plataforma, utilize os seguintes dados de login:
 
-E-mail: gestao@livrasilia.com.br
-Senha: livrasilia123
+>E-mail: gestao@livrasilia.com.br
+>Senha: livrasilia123
+
+## Cadastro de clientes
+
+Para o cadastro bem-sucedido de novos clientes, siga as instruções a seguir:
+- O nome precisa conter de 3 a 50 caracteres,
+- O e-mail precisa estar no formato "email@email.<alguma coisa>",
+- O telefone precisa ser no formato: DDD + 9 números
+- O CPF deve conter 11 número.
+
+## Cadastro de livros
+
+Para o cadastro bem-sucedido de novos livros, siga as instruções a seguir:
+- O nome precisa conter de 1 a 5633 caracteres,
+- O nome do autor precisa conter mais que 2 caracteres,
+- O gênero precisa conter mais que 3 caracteres,
+- O preço precisa ser um número inteiro.
+
+## Ferramenta de busca
+
+Você pode buscar por clientes ou livros específicos através da busca no site utilizando o atributo "nome" como referência.
 ## Contato dos desenvolvedores
 
  - [Camila Xavier](https://www.linkedin.com/in/camila-reis-xavier/)
