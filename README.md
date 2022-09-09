@@ -8,6 +8,9 @@ A Livrasilia é uma plataforma SPA de gestão de estoque e base de clientes cria
 ## Tecnologias Utilizadas
 
  - React.js
+ - Npm
+ - Insomnia/Postman
+ - Hooks personalizados
  - Styled-Components
  - React-Router-Dom
  - Animação CSS
@@ -15,23 +18,45 @@ A Livrasilia é uma plataforma SPA de gestão de estoque e base de clientes cria
  - Figma
  - Heroku
 
-## Como utilizar 
+## Inicialização da aplicação via terminal (local)
 
-É possível utilizar o projeto seguindo o passo a passo:
--   Acesse a Hech API clicando   [nesse Link](https://github.com/devHelioFranco/tattoo-api-rest)
--   Use Git Clone no repositório
--   Abra em  [http://localhost:3000](http://localhost:3000/)  em seu navegador
--   Digite npm start no terminal do seu VSCode para rodar a API
--   Clone também  o repositório React da Hech, que você encontra  [nesse link](https://github.com/devHelioFranco/tattoo-studio-react)
--   No terminal do VSCODE digite `npm i` para instalar todas as dependências 
--   `npm start` pra rodar os projetos
+No terminal de sua escolha, clone o repositório:
 
+```bash
+git clone https://github.com/juliapradob/projeto-modulo5.git
+```
 
+Vá até o diretório do projeto:
 
-## Contato dos Desenvolvedores
+```bash
+cd projeto-modulo5
+```
 
- - [Evelyn Alves](https://www.linkedin.com/in/evelynbalves/)
- - [Hyan Araujo](https://www.linkedin.com/in/hyan-araujo-55a9891b2/)
- - [Caio Cavalcanti](https://www.linkedin.com/in/caio-cavalcanti-17b50b13a/)
- - [Mariana Cristina](https://www.linkedin.com/in/mariana-cristina-santos/)
- - [Helio Franco](https://www.linkedin.com/in/dev-heliofranco/)
+Instale as dependências:
+
+```bash
+npm install 
+```
+
+Inicie o servidor local:
+
+```bash
+npm start
+```
+
+## Deploy da aplicação
+O site em funcionamento pode ser acessado [aqui](por link aqui)
+
+## Dados de login
+
+Para entrar na plataforma, utilize os seguintes dados de login:
+
+E-mail: gestao@livrasilia.com.br
+Senha: livrasilia123
+## Contato dos desenvolvedores
+
+ - [Camila Xavier](https://www.linkedin.com/in/camila-reis-xavier/)
+ - [Gabriella Rodrigues](https://www.linkedin.com/in/gabirodrigues-rocha/)
+ - [Julia Prado](https://www.linkedin.com/in/juliapradob/)
+ - [Karina Maciel](https://www.linkedin.com/in/karinamottamaciel/)
+ - [Vitor Augusto](https://www.linkedin.com/in/vitor-aam/)
