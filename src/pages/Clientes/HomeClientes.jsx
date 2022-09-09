@@ -1,5 +1,5 @@
 import { RequisitaCliente, DeletaCliente } from "../../services/requisicaoClientes"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
 import { Botao } from "../../components/Button/Button";
@@ -9,6 +9,13 @@ export function HomeClientes() {
     const [clientes, setClientes] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [filtro, setFiltro] = useState('');
+
+    const clientesFiltrados = useMemo( ()=> {
+        const lowerFiltro = filtro.toLowerCase();
+        return clientes.filter((cliente) => {
+            return cliente.nome.toLowerCase().includes(lowerFiltro)
+        }, [filtro])
+    } )
     
 
     const getClientes = () => {
@@ -34,13 +41,13 @@ export function HomeClientes() {
         <div>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
-                <input type="text" id='pesquisa' onChange={(e) => {
+                <input type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
                     setFiltro(e.target.value)}
                 }/>
                 <Botao texto="Adicionar cliente" navegação={true} clique="/cria-cliente" />
             </div>
             <Tabela 
-                clientes={clientes}
+                clientes={clientesFiltrados}
                 aoDeletar={(id) => {
                     const confirmaDelecao = confirm('Você deseja deletar este usuário?')
                     if(confirmaDelecao) {

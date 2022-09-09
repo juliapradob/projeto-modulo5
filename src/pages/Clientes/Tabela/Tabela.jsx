@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import S from './Tabela.module.css'
 
 export const Tabela = (props) => {
-  console.log(props.clientes)
   return (
     <table className = {S.tabela}>
       <thead>
