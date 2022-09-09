@@ -10,7 +10,6 @@ import { CriaEditaLivros } from './pages/Livros/CriaEditaLivros/CriaEditaLivros'
 import { Login } from './pages/Login/Login'
 import './index.css'
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
