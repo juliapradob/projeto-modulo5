@@ -16,7 +16,7 @@ table.tabela {
     text-align: center; 
 }
 
-.tabela thead {
+.tabela .head {
     background-color: #C5D7FF;
     font-weight: 600;
     padding: 8px;
