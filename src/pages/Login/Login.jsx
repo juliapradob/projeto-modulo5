@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Home } from '../Home/Home'
 import { Botao } from "../../components/Button/Button"
 import logo from '../../assets/images/logo_livrasilia.png'
 import "./Login.css"
