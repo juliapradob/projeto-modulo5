@@ -2,7 +2,7 @@
 
 A Livrasilia é uma plataforma SPA de gestão de estoque e base de clientes criada para o projeto final do curso de Desenvolvimento Web Full Stack da Resilia Educação. Criada com um front-end em React.js consumindo uma API Rest desenvolvida em Node.js.
 
-## Tecnologias Utilizadas
+## Tecnologias e ferramentas utilizadas
 
  - React.js
  - Npm
@@ -14,6 +14,8 @@ A Livrasilia é uma plataforma SPA de gestão de estoque e base de clientes cria
  - Axios
  - Figma
  - Heroku
+ - Canva
+ - Jira
 
 ## Inicialização da aplicação via terminal (local)
 
