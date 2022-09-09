@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import S from './Tabela.module.css'
 
 export const Tabela = (props) => {
-    console.log(props.clientes)
     return (
         <table className = {S.tabela}>
         <thead>
@@ -13,9 +12,10 @@ export const Tabela = (props) => {
             <th>CPF</th>
             <th>Ações</th>
         </thead>
-        {props.clientes.map(cliente => {
+        <tbody>
+          {props.clientes.map((cliente, index) => {
             return (
-            <tr>
+            <tr key={index}>
                 <td>{cliente.id}</td>
                 <td>{cliente.nome}</td>
                 <td>{cliente.email}</td>
@@ -29,7 +29,9 @@ export const Tabela = (props) => {
                 }} href="#">Deletar</a>
                 </td>
             </tr>
-            )})}
+            )})}  
+        </tbody>
+        
         </table>
     )
     }
