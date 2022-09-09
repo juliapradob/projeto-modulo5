@@ -3,13 +3,21 @@ import { Header } from "../../components/Header/Header";
 import { Botao } from "../../components/Button/Button";
 import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 
 import S from './HomeLivros.module.css'
 
 export function HomeLivros() {
     const [livros, setLivros] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [filtro, setFiltro] = useState('');
+
+    const livrosFiltrados = useMemo( ()=> {
+        const lowerFiltro = filtro.toLowerCase();
+        return livros.filter((livro) => {
+            return livro.titulo.toLowerCase().includes(lowerFiltro)
+        }, [filtro])
+    } )
 
     const getLivros = () => {
         RequisitaLivros().then(({ data }) => {
@@ -33,10 +41,13 @@ export function HomeLivros() {
             <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Livros</h1>
+                <input type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
+                    setFiltro(e.target.value)}
+                }/>
                 <Botao texto="Adicionar livro" navegação={true} clique="/cria-livro" />
             </div>
             <Tabela 
-                livros={livros} 
+                livros={livrosFiltrados} 
                 aoDeletar={(id) => {
                     const confirmaDelecao = confirm('Você deseja deletar este livro?')
                     if(confirmaDelecao) {

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import S from './Tabela.module.css'
 
 export const Tabela = (props) => {
-  console.log(props.livros)
   return (
     <table className = {S.tabela}>
       <thead>
@@ -13,9 +12,10 @@ export const Tabela = (props) => {
         <th>Valor</th>
         <th>Ações</th>
       </thead>
-      {props.livros.map(livro => {
+      <tbody>
+        {props.livros.map((livro, index) => {
         return (
-          <tr>
+          <tr key={index}>
             <td>{livro.id}</td>
             <td>{livro.titulo}</td>
             <td>{livro.autor}</td>
@@ -30,6 +30,8 @@ export const Tabela = (props) => {
             </td>
           </tr>
         )})}
+      </tbody>
+      
     </table>
   )
 }

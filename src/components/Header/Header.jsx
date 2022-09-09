@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logoLivrasilia from '../../assets/images/logo_livrasilia.png'
+import logoLivrasilia from '../../images/logo_livrasilia.png'
 import '../../reset.css'
 import S from './Header.module.css'
 
