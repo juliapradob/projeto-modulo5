@@ -8,6 +8,8 @@ import S from './HomeClientes.module.css';
 export function HomeClientes() {
     const [clientes, setClientes] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [filtro, setFiltro] = useState('');
+    
 
     const getClientes = () => {
         RequisitaCliente().then(({ data }) => {
@@ -26,14 +28,19 @@ export function HomeClientes() {
         return <Loading/>
     }
 
+
+
     return (
         <div>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
+                <input type="text" id='pesquisa' onChange={(e) => {
+                    setFiltro(e.target.value)}
+                }/>
                 <Botao texto="Adicionar cliente" navegação={true} clique="/cria-cliente" />
             </div>
             <Tabela 
-                clientes={clientes} 
+                clientes={clientes}
                 aoDeletar={(id) => {
                     const confirmaDelecao = confirm('Você deseja deletar este usuário?')
                     if(confirmaDelecao) {

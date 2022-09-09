@@ -2,7 +2,7 @@ import { RequisitaLivros } from "../../services/requisicaoLivros"
 import { Botao } from "../../components/Button/Button";
 import { useEffect, useState } from "react"
 
-export function Livros() {
+export function HomeLivros() {
     const [livros, setLivros] = useState([]);
 
     const getLivros = async () => {

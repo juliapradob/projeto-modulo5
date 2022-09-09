@@ -13,9 +13,9 @@ export const Tabela = (props) => {
         <th>CPF</th>
         <th>Ações</th>
       </thead>
-      {props.clientes.map(cliente => {
+      {props.clientes.map((cliente, index) => {
         return (
-          <tr>
+          <tr key={index}>
             <td>{cliente.id}</td>
             <td>{cliente.nome}</td>
             <td>{cliente.email}</td>
@@ -30,6 +30,8 @@ export const Tabela = (props) => {
             </td>
           </tr>
         )})}
+    <tfoot>
+    </tfoot>
     </table>
   )
 }
