@@ -44,7 +44,7 @@ npm start
 ```
 
 ## Deploy da aplicação
-O site em funcionamento pode ser acessado [aqui](por link aqui)
+O site em funcionamento pode ser acessado [aqui](https://projeto-modulo5.vercel.app/)
 
 ## Dados de login
 
