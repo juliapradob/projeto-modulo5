@@ -1,4 +1,5 @@
 import { RequisitaLivros, DeletaLivro } from "../../services/requisicaoLivros"
+import { Header } from "../../components/Header/Header";
 import { Botao } from "../../components/Button/Button";
 import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
@@ -29,6 +30,7 @@ export function HomeLivros() {
 
     return (
         <div>
+            <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Livros</h1>
                 <Botao texto="Adicionar livro" navegação={true} clique="/cria-livro" />
