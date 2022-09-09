@@ -126,6 +126,8 @@ Para o cadastro bem-sucedido de novos livros, siga as instruções a seguir:
  http://127.0.0.1:5173/edita-cliente/1
  ```
  
+ Nota-se que o campo de ID não pode ser editado.
+ 
  #### Livros
  
  (URL)/edita-livro/(número do ID)
