@@ -160,6 +160,7 @@ Para outros erros o procedimento é o mesmo.
  - [Vite](https://vitejs.dev/) - Ferramenta front-end utlizada na inicialização do projeto React.
  - [React.js](https://reactjs.org/) - Biblioteca javascript utlizada para interface do projeto.
  - [React Router](https://reactrouter.com/en/main) - Pacote para auxiliar na navegação entre as páginas com rotas.
+ - [Styled-components](https://styled-components.com/docs) - Documentação da biblioteca que possibilita escrever códigos CSS dentro do JavaScript.
  - [Axios](https://axios-http.com/docs/intro) - Cliente HTTP utilizado para fazer as requisições da API.
  - [Node.js](https://nodejs.org/pt-br/) - Ambiente de execução JavaScript.
  - [Livrasilia API](https://github.com/juliapradob/projeto-modulo4) - API REST utilizada no back-end do projeto.
