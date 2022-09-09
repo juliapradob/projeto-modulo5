@@ -31,7 +31,7 @@
 }
 
 input.pesquisa {
-    background: url('./src/images/lupa.jpg') no-repeat right / 1.5em;
+    background: url(https://github.com/juliapradob/projeto-modulo5/blob/main/src/images/lupa.jpg?raw=true) no-repeat right / 1.5em;
     border: 2px #9BE51A solid;
     border-radius: 8px;
     width: 40%;
