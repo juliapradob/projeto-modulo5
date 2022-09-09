@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Botao } from "../../components/Button/Button"
-import logo from '../../assets/images/logo_livrasilia.png'
+import logo from '../../images/logo_livrasilia.png'
 import "./Login.css"
 
 export function Login() {

@@ -1,6 +1,6 @@
 import { Botao } from "../../components/Button/Button"
 import { Header } from "../../components/Header/Header"
-import homeImg from '../../assets/images/home.svg'
+import homeImg from '../../images/home.svg'
 
 import "./Home.css"
 
