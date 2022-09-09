@@ -62,6 +62,11 @@ Para entrar na plataforma, utilize os seguintes dados de login:
 
 A aplicação será inicializada na URL `http://127.0.0.1:5173/` na página de login, e as rotas de cada página foram definidas através do `react-router-dom`. As entidades utilizadas da API Livrasilia foram a de `Clientes` e `Livros`, os endpoints da API podem ser acessados na [documentação da API](https://github.com/juliapradob/projeto-modulo4) e nos [arquivos de requisições](https://github.com/juliapradob/projeto-modulo5/tree/main/src/services) na pasta `services`.
 
+### Home
+
+Após realizar o login, o usuário será redirecionado a página inicial de rota `/home`, nesta página será selecionado qual categoria vai ser gerenciada: `Clientes` ou `Livros`.
+
+
 ### Exibe todos os itens de clientes
 
 ```
