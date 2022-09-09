@@ -36,14 +36,12 @@ export function HomeClientes() {
         return <Loading/>
     }
 
-
-
     return (
         <div>
             <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
-                <input type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
+                <input type="text" className={S.pesquisa} id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
                     setFiltro(e.target.value)}
                 }/>
                 <Botao texto="Adicionar cliente" navegação={true} clique="/cria-cliente" />

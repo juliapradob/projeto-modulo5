@@ -41,7 +41,7 @@ export function HomeLivros() {
             <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Livros</h1>
-                <input type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
+                <input className={S.pesquisa} type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
                     setFiltro(e.target.value)}
                 }/>
                 <Botao texto="Adicionar livro" navegação={true} clique="/cria-livro" />
