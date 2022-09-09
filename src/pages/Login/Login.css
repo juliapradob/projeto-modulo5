@@ -1,0 +1,73 @@
+.fundoLogin {
+    background-color: #185ADB;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telaLogin {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telaLogin img {
+    width: 300px;
+    margin-bottom: 32px;
+}
+
+.telaLogin h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    margin: 16px 0;
+}
+
+.telaLogin form {
+    width: 20rem;
+    margin: auto;
+    color: white;
+    background-color: #185ADB;
+}
+
+.telaLogin input {
+    width: 20rem;
+    margin: 8px 0;
+    font-weight: 600;
+    border: 0px solid;
+    padding: 6px 6px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.telaLogin input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.telaLogin button {
+    background-color: #9BE51A;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin-top: 20px;
+    border: 0px #9BE51A solid;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.5s;
+    width: 10rem;
+    padding: 4px 0;
+}
+
+.telaLogin button:hover {
+    background-color: #C5D7FF;
+}

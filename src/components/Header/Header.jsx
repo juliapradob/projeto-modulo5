@@ -7,11 +7,10 @@ export const Header = () => {
     return(
         <header>
             <nav className={S.header}>
-                <Link to='/'><img src={logoLivrasilia} alt='Logo Livrasilia'/></Link>
+                <Link to='/home'><img src={logoLivrasilia} alt='Logo Livrasilia'/></Link>
                 <div className={S.headerDireita}>
                     <Link to='/clientes'>Clientes</Link>
                     <Link to='/livros'>Livros</Link>
-                    <Link to='/informatica'>Informática</Link>
                 </div>
             </nav>
         </header>
