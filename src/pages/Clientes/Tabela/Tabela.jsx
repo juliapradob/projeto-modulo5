@@ -5,13 +5,16 @@ export const Tabela = (props) => {
     return (
         <table className = {S.tabela}>
         <thead>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Telefone</th>
-            <th>CPF</th>
-            <th>Ações</th>
+            <tr className={S.head}>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+                <th>Ações</th>
+            </tr>   
         </thead>
+        
         <tbody>
           {props.clientes.map((cliente, index) => {
             return (
