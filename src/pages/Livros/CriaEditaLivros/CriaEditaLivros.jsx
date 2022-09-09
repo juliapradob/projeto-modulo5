@@ -23,6 +23,7 @@ export const CriaEditaLivros = () => {
 
     return (
         <div className={S.formulario}>
+            <Header/>
             <h1>{params.id ? "Editar livro" : "Cadastrar livro"}</h1>
             <Form temId={params.id} editarLivro={editarLivro} aoTerminar={(livro) => {
                 if(params.id) {

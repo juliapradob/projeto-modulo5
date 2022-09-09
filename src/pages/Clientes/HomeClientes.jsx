@@ -1,5 +1,6 @@
 import { RequisitaCliente, DeletaCliente } from "../../services/requisicaoClientes"
 import { useEffect, useState, useMemo } from "react"
+import { Header } from '../../components/Header/Header'
 import { Loading } from "../../components/Loading/Loading";
 import { Tabela } from "./Tabela/Tabela"
 import { Botao } from "../../components/Button/Button";
@@ -39,6 +40,7 @@ export function HomeClientes() {
 
     return (
         <div>
+            <Header/>
             <div className={S.cadastroContainer}>
                 <h1>Clientes</h1>
                 <input type="text" id='pesquisa' placeholder="Procurar por nome" onChange={(e) => {
